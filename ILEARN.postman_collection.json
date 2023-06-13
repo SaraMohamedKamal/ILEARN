@@ -1,0 +1,983 @@
+{
+	"info": {
+		"_postman_id": "c36fbbb5-a4cd-4389-87b8-4efdeea2eecf",
+		"name": "ILEARN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26246009"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"home"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "student@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "studentpassword",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "View Courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "af24a368e30744ad168704ea15996c95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:4000/view-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"view-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Instructors",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "d312e7c9de5dcc20d73c1872ac890dab",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/view-instructors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"view-instructors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Students",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "af24a368e30744ad168704ea15996c95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/view-students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"view-students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "af24a368e30744ad168704ea15996c95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "C#",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "7000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/add-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"add-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Instructor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "d312e7c9de5dcc20d73c1872ac890dab",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "mohammed ahmed",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mohamme",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m@gmailcom",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0101615721",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/add-instructor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"add-instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "d312e7c9de5dcc20d73c1872ac890dab",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "momom",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ma@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01234567890",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/add-student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"add-student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Instructors To Courses",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "af24a368e30744ad168704ea15996c95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "instructor_email",
+									"value": "instructor@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "5000l",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/assign-instructors-to-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"assign-instructors-to-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "af24a368e30744ad168704ea15996c95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "5000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/delete-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"delete-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Instructor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "af24a368e30744ad168704ea15996c95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "student@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/delete-instructor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"delete-instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "af24a368e30744ad168704ea15996c95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "studentgmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/delete-student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"delete-student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "af24a368e30744ad168704ea15996c95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "JAVA",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "50005l",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "oldCode",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "oldStatus",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/update-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"update-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Instructor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "d312e7c9de5dcc20d73c1872ac890dab",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "instructor",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "instructorinstructor",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "instructor@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01234554321",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "oldEmail",
+									"value": "instructor@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/update-instructor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"update-instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "d312e7c9de5dcc20d73c1872ac890dab",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "student",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "studentstudent",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "student@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01234512345",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "oldEmail",
+									"value": "student@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/update-student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"update-student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "d312e7c9de5dcc20d73c1872ac890dab",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/get-course/2222",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"get-course",
+								"2222"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instructor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "d312e7c9de5dcc20d73c1872ac890dab",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/get-instructor/instructor@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"get-instructor",
+								"instructor@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "d312e7c9de5dcc20d73c1872ac890dab",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/get-student/student@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"get-student",
+								"student@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INSTRUCTOR",
+			"item": [
+				{
+					"name": "View Instructor Courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eb93cd106eb7291cd9e38e657c879226",
+								"type": "text"
+							},
+							{
+								"key": "email",
+								"value": "instructor@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:4000/view-instructor-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"view-instructor-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Grades",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "6131db0479180bfd094d98674cf1092f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "student_email",
+									"value": "student@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "course_code",
+									"value": "2222k",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "101",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/set-grades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"set-grades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Courses With Students",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eb93cd106eb7291cd9e38e657c879226",
+								"type": "text"
+							},
+							{
+								"key": "email",
+								"value": "instructor@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:4000/view-courses-with-students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"view-courses-with-students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Enrolled Students",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eb93cd106eb7291cd9e38e657c879226",
+								"type": "text"
+							},
+							{
+								"key": "code",
+								"value": "2222",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:4000/view-enrolled-students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"view-enrolled-students"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "STUDENT",
+			"item": [
+				{
+					"name": "Get My Courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "26ef0fe5b0394a56b3f62ace560f3602",
+								"type": "text"
+							},
+							{
+								"key": "email",
+								"value": "student@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:4000/get-my-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"get-my-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "26ef0fe5b0394a56b3f62ace560f3602",
+								"type": "text"
+							},
+							{
+								"key": "email",
+								"value": "student@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:4000/get-all-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"get-all-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enroll Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "9b50caa468730a331916c82ae560d4cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "mo@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "5555",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/enroll-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"enroll-course"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
